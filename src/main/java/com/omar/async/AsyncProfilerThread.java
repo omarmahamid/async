@@ -7,7 +7,7 @@ import com.omar.async.requests.StopAsyncProfilerRequest;
 import java.util.Date;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-public class AsyncProfilerManager implements Runnable{
+public class AsyncProfilerThread implements Runnable{
 
     private final IAsyncProfilerHandler profilerHandler;
     private final AtomicBoolean isStarted = new AtomicBoolean(false);
@@ -15,7 +15,7 @@ public class AsyncProfilerManager implements Runnable{
     private final long duration;
     private String outputFile;
 
-    AsyncProfilerManager(IAsyncProfilerHandler profilerHandler, String event, long duration){
+    AsyncProfilerThread(IAsyncProfilerHandler profilerHandler, String event, long duration){
         this.profilerHandler = profilerHandler;
         this.event = event;
         this.duration = duration;
