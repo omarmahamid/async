@@ -15,8 +15,8 @@ public class AsyncProfilerConfiguration {
 
 
     @Bean
-    public AsyncProfilerScheduler createScheduler(@Value("async-profiler-event") String event,
-                                                  @Value("async-profiler-duration") long duration){
+    public AsyncProfilerScheduler createScheduler(@Value("${async-profiler-event}") String event,
+                                                  @Value("${async-profiler-duration}") long duration){
 
         ScheduledExecutorService executorService = new ScheduledThreadPoolExecutor(2, new AsyncProfilerThreadFactory());
 

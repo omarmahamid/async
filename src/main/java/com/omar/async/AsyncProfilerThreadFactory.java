@@ -10,6 +10,6 @@ public class AsyncProfilerThreadFactory implements ThreadFactory {
     @Override
     public Thread newThread(Runnable r) {
         int counted = counter.getAndIncrement();
-        return new Thread(r, "omar-async-profiling" + counted);
+        return new Thread(r, "async-prof" + counted);
     }
 }
