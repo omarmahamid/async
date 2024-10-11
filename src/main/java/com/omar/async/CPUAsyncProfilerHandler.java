@@ -1,7 +1,7 @@
 package com.omar.async;
 
 import com.omar.async.exception.AsyncProfilerException;
-import com.omar.async.exception.EventNotSupportedException;
+import com.omar.async.exception.ActionNotSupportedException;
 import one.profiler.AsyncProfiler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,7 +33,7 @@ public class CPUAsyncProfilerHandler implements IAsyncProfilerHandler{
                 }
                 asyncProfiler.execute(String.format("stop,file=%s.html", outputFile));
             } else {
-                throw new EventNotSupportedException(String.format("event %s not supported", request.getEvent()));
+                throw new ActionNotSupportedException(String.format("event %s not supported", request.getEvent()));
             }
         } catch (Exception e) {
             throw new AsyncProfilerException("Exception while profiling", e);

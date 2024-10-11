@@ -1,6 +1,6 @@
 package com.omar.async;
 
-import com.omar.async.exception.ModeNotSupportedException;
+import com.omar.async.exception.EventNotSupportedException;
 import one.profiler.AsyncProfiler;
 
 import java.util.Map;
@@ -14,7 +14,7 @@ public class ModeAsyncProfilerFactory {
         return asyncProfilersModes.computeIfAbsent(modeAsyncProfiler, key -> switch (key) {
             case CPU -> new CPUAsyncProfilerHandler(AsyncProfiler.getInstance());
             case ALLOC -> new AllocAsyncProfilerHandler(AsyncProfiler.getInstance());
-            default -> throw new ModeNotSupportedException(String.format("mode %s not supported currently", modeAsyncProfiler.name()));
+            default -> throw new EventNotSupportedException(String.format("mode %s not supported currently", modeAsyncProfiler.name()));
         });
     }
 

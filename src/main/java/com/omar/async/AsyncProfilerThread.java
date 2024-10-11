@@ -1,7 +1,7 @@
 package com.omar.async;
 
 import com.omar.async.exception.AsyncProfilerException;
-import com.omar.async.requests.StartCPUAsyncProfilerRequest;
+import com.omar.async.requests.StartAsyncProfilerRequest;
 import com.omar.async.requests.StopAsyncProfilerRequest;
 
 import java.util.Date;
@@ -37,7 +37,7 @@ public class AsyncProfilerThread implements Runnable{
         }
 
         outputFile = String.format("%s-%s", event, new Date());
-        request = new StartCPUAsyncProfilerRequest(duration, event, outputFile);
+        request = new StartAsyncProfilerRequest(duration, event, outputFile);
         try {
             profilerHandler.handle(request);
         } catch (AsyncProfilerException e) {
