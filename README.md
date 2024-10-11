@@ -6,10 +6,6 @@ By this repo, it can be embedded in a Spring application within a scheduled serv
 
 # Dependency
 
-Maven
-^^^^^
-
-.. code-block:: xml
 
 	<dependency>
 		<groupId>io.github.omarmahamid</groupId>
@@ -21,5 +17,6 @@ Maven
 # Configuration
 
 `async-profiler-event` - Event of async profiler (CPU, ALLOC, WALL).
+
 `async-profiler-duration` - Duration of interval profiling in seconds.
 
