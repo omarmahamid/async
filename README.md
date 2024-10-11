@@ -6,13 +6,15 @@ By this repo, it can be embedded in a Spring application within a scheduled serv
 
 # Dependency
 
-````
-  <dependency>
-			<groupId>io.github.omarmahamid</groupId>
-			<artifactId>async</artifactId>
-			<version>0.0.1</version>
-  </dependency>
-````
+Maven
+^^^^^
+
+.. code-block:: xml
+	<dependency>
+		<groupId>io.github.omarmahamid</groupId>
+		<artifactId>async</artifactId>
+		<version>0.0.1</version>
+  	</dependency>
 
 
 # Configuration
