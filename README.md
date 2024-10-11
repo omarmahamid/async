@@ -10,6 +10,7 @@ Maven
 ^^^^^
 
 .. code-block:: xml
+
 	<dependency>
 		<groupId>io.github.omarmahamid</groupId>
 		<artifactId>async</artifactId>
