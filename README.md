@@ -22,7 +22,7 @@ Async Profiler embedded in a Spring application within a scheduled service, capt
 	<dependency>
 		<groupId>io.github.omarmahamid</groupId>
 		<artifactId>async</artifactId>
-		<version>0.0.1</version>
+		<version>0.0.2</version>
   	</dependency>
 
 
