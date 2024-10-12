@@ -46,3 +46,4 @@ async will generate a html file that can be shown in the browser.
  
 ![img.png](img.png)
 
+![img_1.png](img_1.png)
