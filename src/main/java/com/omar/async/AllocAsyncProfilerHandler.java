@@ -6,16 +6,31 @@ import one.profiler.AsyncProfiler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class AllocAsyncProfilerHandler implements IAsyncProfilerHandler {
+
+/**
+ * Handles async profiling requests for allocation tracking.
+ */
+public class AllocAsyncProfilerHandler extends AbstractProfilerHandler implements IAsyncProfilerHandler {
+
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AllocAsyncProfilerHandler.class);
 
-    private final AsyncProfiler asyncProfiler;
 
+    /**
+     * Initializes the alloc async profiler handler with the provided async profiler.
+     *
+     * @param asyncProfiler The async profiler to use for profiling.
+     */
     AllocAsyncProfilerHandler(AsyncProfiler asyncProfiler) {
-        this.asyncProfiler = asyncProfiler;
+        super(asyncProfiler);
     }
 
+    /**
+     * Handles an async profiling request.
+     *
+     * @param request  The async profiling request to handle.
+     * @throws AsyncProfilerException If an error occurs during profiling.
+     */
     @Override
     public void handle(AsyncProfilerRequest request) throws AsyncProfilerException {
 
@@ -25,12 +40,12 @@ public class AllocAsyncProfilerHandler implements IAsyncProfilerHandler {
         LOGGER.info("Handling async CPU profiler {}, action {}", request.getEvent(), action);
         try {
             if (AsyncProfileActions.START.name().equals(action)) {
-                asyncProfiler.execute(String.format("start,event=alloc,file=%s", outputFile));
+                execute(String.format("start,event=alloc,file=%s", outputFile));
             } else if (AsyncProfileActions.STOP.name().equals(action)) {
                 if (outputFile.contains(".html")) {
                     outputFile = outputFile.substring(0, outputFile.indexOf(".html"));
                 }
-                asyncProfiler.execute(String.format("stop,file=%s.html", outputFile));
+                execute(String.format("stop,file=%s.html", outputFile));
             } else {
                 throw new ActionNotSupportedException(String.format("event %s not supported", request.getEvent()));
             }

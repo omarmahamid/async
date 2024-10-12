@@ -1,7 +1,6 @@
 # async
 
-Async Profiler is a sampling CPU and heap profiler for Java that uses AsyncGetCallTrace and perf_events.
-By this repo, it can be embedded in a Spring application within a scheduled service, capturing profiling data at regular intervals (each tick of time) and generating an HTML report that can be viewed in a browser
+Async Profiler embedded in a Spring application within a scheduled service, capturing profiling data at regular intervals (each tick of time) and generating an HTML report that can be viewed in a browser
 
 # pre-requisite
 
@@ -32,9 +31,18 @@ By this repo, it can be embedded in a Spring application within a scheduled serv
 
 # Configuration
 
-`async-profiler-event` - Event of async profiler (CPU, ALLOC, WALL).
+`async-profiler-enabled` - Enable profiler to work.
 
-`async-profiler-duration` - Duration of interval profiling in seconds.
+`async-profiler-event` - Event of async profiler (CPU, ALLOC, WALL). (Default is CPU)
+
+`async-profiler-duration` - Duration of interval profiling in seconds. (Default is 1000)
+
+`async-profiler-basedir` - The based directory to dump the html files in. (Default is base application dir)
 
 
+## Generated File
+
+async will generate a html file that can be shown in the browser.
+ 
+![img.png](img.png)
 
