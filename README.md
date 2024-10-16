@@ -47,3 +47,9 @@ async will generate a html file that can be shown in the browser.
 ![img.png](img.png)
 
 ![img_1.png](img_1.png)
+
+
+## Future Plans 
+
+1. create artifact for @Profiling on tests
+2. integrate @Profiling in JUnit library
