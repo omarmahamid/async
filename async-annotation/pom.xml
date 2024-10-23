@@ -11,10 +11,17 @@
 
     <artifactId>async-annotation</artifactId>
 
-    <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+
+    <dependencies>
+
+        <!-- ASYNC DEPENDENCIES -->
+
+        <dependency>
+            <groupId>io.github.omarmahamid</groupId>
+            <artifactId>async-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+    </dependencies>
 
 </project>
