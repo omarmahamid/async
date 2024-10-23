@@ -1,9 +1,9 @@
 package io.github.omarmahamid.async;
 
-import com.omar.async.exception.AsyncProfilerException;
-import com.omar.async.exception.ActionNotSupportedException;
-import com.omar.async.requests.StartAsyncProfilerRequest;
-import com.omar.async.requests.StopAsyncProfilerRequest;
+import io.github.omarmahamid.async.exception.ActionNotSupportedException;
+import io.github.omarmahamid.async.exception.AsyncProfilerException;
+import io.github.omarmahamid.async.requests.StartAsyncProfilerRequest;
+import io.github.omarmahamid.async.requests.StopAsyncProfilerRequest;
 import one.profiler.AsyncProfiler;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
