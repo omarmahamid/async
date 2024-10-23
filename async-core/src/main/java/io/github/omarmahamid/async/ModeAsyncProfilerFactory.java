@@ -8,6 +8,10 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class ModeAsyncProfilerFactory {
 
+    private ModeAsyncProfilerFactory(){
+        throw new IllegalStateException("Utility class");
+    }
+
     private static final Map<ModeAsyncProfiler, IAsyncProfilerHandler> asyncProfilersModes = new ConcurrentHashMap<>();
 
     public static IAsyncProfilerHandler getAsyncProfiler(ModeAsyncProfiler modeAsyncProfiler){
