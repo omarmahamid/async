@@ -11,8 +11,25 @@
 
     <artifactId>async-annotation</artifactId>
 
+    <properties>
+        <aspectj.version>1.9.7</aspectj.version>
+    </properties>
 
     <dependencies>
+
+        <!-- THIRD PARTY -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
+
 
         <!-- ASYNC DEPENDENCIES -->
 
