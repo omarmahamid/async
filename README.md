@@ -11,9 +11,9 @@ This project provides an embedded solution for Async Profiler within a Java appl
 5. Can profile main method within async-annotation.
 
 ## Artifacts
-1. async-core: Core profiling functionalities.
-2. async-spring: Profiling integration with Spring applications.
-3. async-annotation: Annotations for easy profiling in main methods.
+1. `async-core`: Core profiling functionalities.
+2. `async-spring`: Profiling integration with Spring applications.
+3. `async-annotation`: Annotations for easy profiling in main methods.
 
 
 # pre-requisite
