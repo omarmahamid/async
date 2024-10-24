@@ -1,22 +1,24 @@
 # async
 
+This project provides an embedded solution for Async Profiler within a Java application, with modules for core functionality, Spring integration, and annotations. It enables you to capture profiling data at regular intervals and automatically generate HTML reports that can be viewed in a browser.
 
-Async profiler embedded in java.
+## Features
 
-artifacts
+1. Embedded Async Profiler for Java applications.
+2. Captures profiling data at scheduled intervals.
+3. Generates easy-to-read HTML reports.
+4. Supports multiple profiling events like CPU, ALLOC, and WALL.
+5. Can profile main method within async-annotation.
 
-async-core
+## Artifacts
+1. async-core: Core profiling functionalities.
+2. async-spring: Profiling integration with Spring applications.
+3. async-annotation: Annotations for easy profiling in main methods.
 
-async-spring
-
-async-annotation
-
-
-Async Profiler embedded in a Spring application within a scheduled service, capturing profiling data at regular intervals (each tick of time) and generating an HTML report that can be viewed in a browser
 
 # pre-requisite
 
-`JDK17+`
+`Java 17 or higher`
 
 
 ## Supported Machines
@@ -28,20 +30,36 @@ Async Profiler embedded in a Spring application within a scheduled service, capt
 | arm      | ✔️     | ✔️     | ❌       |
 | arm64    | ✔️     | ✔️     | ❌       |
 
-# Dependency
+
+# Module Details
+
+## async-core
+
+The core module of the project, responsible for managing the actual profiling tasks.
+
+
+### Dependency
 
 
 	<dependency>
 		<groupId>io.github.omarmahamid</groupId>
-		<artifactId>async</artifactId>
-		<version>0.0.2</version>
+		<artifactId>async-core</artifactId>
+		<version>${LATEST_VERSION}</version>
+  	</dependency>
+
+# async-spring
+
+### Dependency
+
+
+	<dependency>
+		<groupId>io.github.omarmahamid</groupId>
+		<artifactId>async-spring</artifactId>
+		<version>${LATEST_VERSION}</version>
   	</dependency>
 
 
-
-
-
-# Configuration
+### Configuration
 
 `async-profiler-enabled` - Enable profiler to work.
 
@@ -51,17 +69,23 @@ Async Profiler embedded in a Spring application within a scheduled service, capt
 
 `async-profiler-basedir` - The based directory to dump the html files in. (Default is base application dir)
 
-
-## Generated File
+### Generated File
 
 async will generate a html file that can be shown in the browser.
- 
+
 ![img.png](img.png)
 
 ![img_1.png](img_1.png)
 
+# async-annotation
 
-## Future Plans 
+### Dependency
 
-1. create artifact for @Profiling on tests
-2. integrate @Profiling in JUnit library
+
+	<dependency>
+		<groupId>io.github.omarmahamid</groupId>
+		<artifactId>async-annotation</artifactId>
+		<version>${LATEST_VERSION}</version>
+  	</dependency>
+
+
