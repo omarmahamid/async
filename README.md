@@ -1,5 +1,17 @@
 # async
 
+
+Async profiler embedded in java.
+
+artifacts
+
+async-core
+
+async-spring
+
+async-annotation
+
+
 Async Profiler embedded in a Spring application within a scheduled service, capturing profiling data at regular intervals (each tick of time) and generating an HTML report that can be viewed in a browser
 
 # pre-requisite
