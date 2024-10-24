@@ -14,4 +14,7 @@ public @interface Profiling {
 
     ModeAsyncProfiler mode() default ModeAsyncProfiler.CPU;
 
+    long duration() default 30; // in millisecond
+
+    String fileDump();
 }
