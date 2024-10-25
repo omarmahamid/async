@@ -1,6 +1,6 @@
 # async
 
-This project provides an embedded solution for Async Profiler within a Java application, with modules for core functionality, Spring integration, and annotations. It enables you to capture profiling data at regular intervals and automatically generate HTML reports that can be viewed in a browser.
+This project provides an embedded solution for Async Profiler https://github.com/async-profiler/async-profiler within a Java application, with modules for core functionality, Spring integration, and annotations. It enables you to capture profiling data at regular intervals and automatically generate HTML reports that can be viewed in a browser.
 
 ## Features
 
