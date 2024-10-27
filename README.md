@@ -18,7 +18,7 @@ This project provides an embedded solution for Async Profiler https://github.com
 
 # pre-requisite
 
-`Java 17 or higher`
+`Java 17+`
 
 
 ## Supported Machines
